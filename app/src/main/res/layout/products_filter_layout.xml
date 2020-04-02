@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dim_padding_medium">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim_margin_very_small"
+            android:text="@string/filter_by_exclusion"
+            android:textSize="@dimen/dim_text_title_item"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/inclusive_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dim_margin"
+                    android:checked="true"
+                    android:text="@string/inclusive" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/exclusive_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exclusive" />
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_margin"
+            android:layout_marginBottom="@dimen/dim_margin_very_small"
+            android:text="@string/risks_at"
+            android:textSize="@dimen/dim_text_title_item"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/old_population"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:drawableStart="@drawable/ic_old"
+                android:drawablePadding="@dimen/dim_padding_very_small"
+                android:text="@string/old_population" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/hepatic_population"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:drawableStart="@drawable/ic_liver"
+                android:drawablePadding="@dimen/dim_padding_very_small"
+                android:text="@string/hepatic_population" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/renal_population"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:drawableStart="@drawable/ic_kidneys"
+                android:drawablePadding="@dimen/dim_padding_very_small"
+                android:text="@string/renal_population" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/pregnancy_population"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:drawableStart="@drawable/ic_pregnant"
+                android:drawablePadding="@dimen/dim_padding_very_small"
+                android:text="@string/pregnancy_population" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/lactation_population"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:drawableStart="@drawable/ic_lactation"
+                android:drawablePadding="@dimen/dim_padding_very_small"
+                android:text="@string/lactation_population" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/child_population"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:drawableStart="@drawable/ic_baby"
+                android:drawablePadding="@dimen/dim_padding_small"
+                android:text="@string/child_population" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

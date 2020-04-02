@@ -1,0 +1,92 @@
+<resources>
+
+    <!--Picture Viewer Theme-->
+    <style name="MyTheme.DarkViewer" parent="MyTheme.Dark">
+        <item name="android:statusBarColor">@color/color_dark_overlay_40</item>
+        <item name="android:navigationBarColor">@color/color_dark_overlay_40</item>
+    </style>
+
+    <!--Toolbars-->
+    <style name="MyToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="titleTextAppearance">@style/MyToolbarTextAppearance</item>
+        <item name="subtitleTextAppearance">@style/MyToolbarTextAppearance.Subtitle</item>
+        <item name="android:background">?colorPrimary</item>
+    </style>
+
+    <style name="MyToolbar.Big" parent="Widget.MaterialComponents.Toolbar">
+        <item name="titleTextAppearance">@style/MyToolbarTextAppearance.Big</item>
+        <item name="subtitleTextAppearance">@style/MyToolbarTextAppearance.Subtitle</item>
+        <item name="android:background">?colorPrimary</item>
+    </style>
+
+    <style name="MyToolbarBackAction.Big" parent="MyToolbar.Big">
+        <item name="navigationIcon">@drawable/ic_arrow_back_black_24dp</item>
+    </style>
+
+    <style name="MyToolbarBackAction" parent="MyToolbar">
+        <item name="navigationIcon">@drawable/ic_arrow_back_black_24dp</item>
+    </style>
+
+    <!--Dialogs-->
+    <style name="MyDialog" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="shapeAppearanceOverlay">@style/MyDialog.Rounded</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MyTextAppearance.Accent</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MyTextAppearance</item>
+        <item name="colorControlActivated">?colorAccent</item>
+    </style>
+
+    <style name="MyDialog.Rounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dim_corner_radius</item>
+    </style>
+
+    <!--Texts-->
+    <style name="MyTextAppearance">
+        <item name="android:textSize">@dimen/dim_text_default</item>
+    </style>
+
+    <style name="MyToolbarTextAppearance">
+        <item name="android:textColor">?itemTextColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dim_text_accent</item>
+    </style>
+
+    <style name="MyTextAppearance.Accent" parent="MyTextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/dim_text_accent</item>
+    </style>
+
+    <style name="MyToolbarTextAppearance.Big" parent="MyToolbarTextAppearance">
+        <item name="android:textSize">@dimen/dim_text_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyToolbarTextAppearance.Subtitle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">@dimen/dim_text_default</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <!--Search Bar-->
+    <style name="MyMaterialSearch">
+        <item name="searchBackground">?colorPrimary</item>
+        <item name="searchCloseIcon">@drawable/ic_close_black_24dp</item>
+        <item name="searchBackIcon">@drawable/ic_arrow_back_black_24dp</item>
+        <item name="android:textColorHint">?itemTextColor</item>
+        <item name="android:hint">@string/search_hint</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!--Button-->
+    <style name="MyButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/selector_button_rounded_accent</item>
+        <item name="android:paddingStart">@dimen/dim_padding</item>
+        <item name="android:paddingEnd">@dimen/dim_padding</item>
+        <item name="android:layout_marginBottom">@dimen/dim_margin_small</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/color_light</item>
+    </style>
+
+
+</resources>

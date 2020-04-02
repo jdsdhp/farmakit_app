@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dim_padding">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result_title"
+        android:layout_width="match_parent"
+        android:textColor="?colorAccent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_margin_very_small"
+        android:textAlignment="center"
+        android:textSize="@dimen/dim_text_title"
+        android:textStyle="bold"
+        tools:text="@tools:sample/us_zipcodes" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="@dimen/dim_text_accent"
+        tools:text="@tools:sample/lorem" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/imc_result_subtitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="?android:textColorSecondary"
+        tools:text="@tools:sample/lorem" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

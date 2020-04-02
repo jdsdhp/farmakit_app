@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_qr_scanner"
+        android:icon="@drawable/ic_qrcode"
+        android:title="@string/code_scanner" />
+    <item
+        android:id="@+id/action_risks"
+        android:icon="@drawable/ic_exclamation_triangle"
+        android:title="@string/risk_categories" />
+    <item
+        android:id="@+id/action_tools"
+        android:icon="@drawable/ic_tools"
+        android:title="@string/tools" />
+
+
+        <item android:title="@string/support">
+            <menu>
+                <item
+                    android:id="@+id/action_settings"
+                    android:icon="@drawable/ic_cog"
+                    android:title="@string/settings" />
+                <item
+                    android:id="@+id/action_help"
+                    android:icon="@drawable/ic_question_circle"
+                    android:title="@string/help" />
+            </menu>
+        </item>
+
+</menu>

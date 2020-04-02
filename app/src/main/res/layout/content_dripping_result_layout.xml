@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dim_padding">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/administer"
+        android:textAlignment="center"
+        android:textSize="@dimen/dim_text_accent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_margin_very_small"
+        android:textAlignment="center"
+        android:textColor="?colorAccent"
+        android:textSize="@dimen/dim_text_title"
+        android:textStyle="bold"
+        tools:text="@tools:sample/lorem" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

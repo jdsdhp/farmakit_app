@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">FarmaKit</string>
+    <string name="app_dev">jesusd0897</string>
+    <string name="app_year">2020</string>
+    <string name="app_copyright">©2020</string>
+    <string name="app_team">neuronX</string>
+    <string name="about_brief">“El amanecer llega después de la oscuridad.”\n- Lisa Wingate</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="settings">Ajustes</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="close">Cerrar</string>
+
+    <string name="search">Buscar</string>
+    <string name="search_hint">Buscar...</string>
+    <string name="we_sorry">Lo sentimos</string>
+    <string name="no_items_found">No se encuentran elementos</string>
+    <string name="default_empty_title">Sin elementos</string>
+    <string name="open_source_licences">Licencias</string>
+    <string name="change_log_version">Versión</string>
+
+    <string name="language_select">Seleccionar</string>
+    <string name="open">Abrir</string>
+
+    <string name="natural_products">Naturales</string>
+    <string name="products">Fármacos</string>
+    <string name="filter">Filtro</string>
+    <string name="no_category">Sin Categoría</string>
+    <string name="inclusive">Inclusivo</string>
+    <string name="exclusive">Exclusivo</string>
+    <string name="filter_by_exclusion">Tipo de filtro</string>
+    <string name="reset_filter">Resetear</string>
+
+    <string name="old_population">Adulto mayor</string>
+    <string name="hepatic_population">Deficiencia Hepática</string>
+    <string name="renal_population">Deficiencia Renal</string>
+    <string name="pregnancy_population">Embarazo</string>
+    <string name="child_population">Niño</string>
+    <string name="lactation_population">Lactancia</string>
+    <string name="not_available">No disponible</string>
+
+    <string name="categories">"Categoría(s) "</string>
+    <string name="classification_ven">Clasificación VEN</string>
+    <string name="composition">Composición</string>
+    <string name="laboratory">Laboratorio</string>
+    <string name="oms">Medicamento esencial de la OMS</string>
+    <string name="distribution">Nivel de distribución</string>
+    <string name="price">Precio</string>
+    <string name="regulation">Regulación a la prescripción</string>
+    <string name="vigilance">Sujeto a vigilancia intensiva</string>
+    <string name="population">Uso en población especial</string>
+
+    <string name="characteristics">Características</string>
+    <string name="contraindications">Contraindicaciones</string>
+    <string name="description">Descripción</string>
+    <string name="pharmacodinamic">Farmacodinámica</string>
+    <string name="indications">Indicaciones</string>
+    <string name="info">Información al Paciente</string>
+    <string name="interactions">Interacciones</string>
+    <string name="posology">Posología</string>
+    <string name="precautions">Precauciones</string>
+    <string name="reactions">Reacciones</string>
+    <string name="overdose">Sobredosis</string>
+    <string name="internal_name">Denominación interna</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="risks_at">Riesgos en</string>
+    <string name="tools">Herramientas</string>
+    <string name="code_scanner">Escanear Código</string>
+    <string name="permissions_required">Es necesario garantizar el permiso para realizar la acción.</string>
+    <string name="scanner_no_results">No se encuentran coincidencias para el código escaneado.</string>
+    <string name="weight_kg">Peso (kg)</string>
+    <string name="height_cm">Talla (cm)</string>
+    <string name="calculate">Calcular</string>
+    <string name="required_field">Campo requerido</string>
+    <string name="result">Resultado</string>
+
+    <string name="imc_low_weight">Bajo peso</string>
+    <string name="imc_low_weight_1">Delgadez severa</string>
+    <string name="imc_low_weight_2">Delgadez moderada</string>
+    <string name="imc_low_weight_3">Delgadez leve</string>
+    <string name="imc_normal_weight">Normal</string>
+    <string name="imc_normal_weight_1">Saludable</string>
+    <string name="imc_over_weight">Sobrepeso</string>
+    <string name="imc_over_weight_1">Preobeso</string>
+    <string name="imc_obese_weight">Obesidad</string>
+    <string name="imc_obese_weight_1">Obesidad leve</string>
+    <string name="imc_obese_weight_2">Obesidad media</string>
+    <string name="imc_obese_weight_3">Obesidad mórbida</string>
+    <string name="vol_ml">Volumen (ml)</string>
+    <string name="duration_h">Duración (h)</string>
+    <string name="administer">Administrar</string>
+    <string name="value_cant_be_0">El valor no puede ser \"0\"</string>
+    <string name="risk_categories">Categorías de Riesgo</string>
+    <string name="support">Soporte</string>
+</resources>

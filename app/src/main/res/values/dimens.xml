@@ -1,0 +1,36 @@
+<resources>
+    <!--Padding & Margin-->
+    <dimen name="dim_padding_very_small">4dp</dimen>
+    <dimen name="dim_padding_small">8dp</dimen>
+    <dimen name="dim_padding">16dp</dimen>
+    <dimen name="dim_padding_medium">24dp</dimen>
+    <dimen name="dim_padding_big">32dp</dimen>
+    <dimen name="dim_padding_really_big">48dp</dimen>
+
+    <dimen name="dim_margin_very_small">4dp</dimen>
+    <dimen name="dim_margin_small">8dp</dimen>
+    <dimen name="dim_margin">16dp</dimen>
+    <dimen name="dim_margin_medium">24dp</dimen>
+    <dimen name="dim_margin_big">32dp</dimen>
+    <dimen name="dim_margin_really_big">48dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--Texts-->
+    <dimen name="dim_text_title">24sp</dimen>
+    <dimen name="dim_text_accent">19sp</dimen>
+    <dimen name="dim_text_subtitle">16sp</dimen>
+    <dimen name="dim_text_default">14sp</dimen>
+    <dimen name="dim_text_small">12sp</dimen>
+    <dimen name="dim_text_very_small">10sp</dimen>
+    <dimen name="dim_text_title_item">@dimen/dim_text_accent</dimen>
+    <dimen name="dim_card_corner_radius">8dp</dimen>
+    <dimen name="dim_card_elevation">0dp</dimen>
+    <dimen name="dim_avatar">100dp</dimen>
+
+    <!--App-->
+    <dimen name="dim_empty_placeholder_image_size">100dp</dimen>
+    <dimen name="dim_corner_radius">10dp</dimen>
+    <dimen name="dim_item_icon_size">36dp</dimen>
+    <dimen name="detail_icon_size">72dp</dimen>
+
+</resources>

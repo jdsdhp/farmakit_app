@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_accent">#ff637b</color>
+
+    <!-- Darker colors -->
+    <color name="color_dark">#000</color>
+    <color name="color_dark_secondary">#101010</color>
+    <color name="color_dark_overlay_40">#66000000</color>
+    <color name="color_dark_overlay_90">#E6000000</color>
+
+    <color name="color_dark_text">#EEEEEE</color>
+    <color name="color_dark_text_secondary">#A6EEEEEE</color>
+
+    <!-- Lighter colors -->
+    <color name="color_light">#FFF</color>
+    <color name="color_light_secondary">#F6F6F6</color>
+    <color name="color_light_overlay_40">#66FFFFFF</color>
+    <color name="color_light_overlay_90">#E6FFFFFF</color>
+
+    <color name="color_light_text">#1A1A1A</color>
+    <color name="color_light_text_secondary">#A61A1A1A</color>
+
+</resources>

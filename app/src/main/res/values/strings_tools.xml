@@ -1,0 +1,43 @@
+<resources>
+
+    <string name="tool_quetelet">Índice de Quetelet</string>
+    <string name="tool_quetelet_subtitle">Índice de masa corporal (IMC)</string>
+    <string name="tool_quetelet_description">El IMC también puede calcularse a partir de tablas o gráficas que muestran el IMC en función
+        de la masa y la altura usando líneas de contorno para distintas categorías. El IMC es un
+        criterio ampliamente aceptado pero no es exacto. Clasifica a las personas en infrapeso, peso
+        normal, sobrepeso y obesidad basandose exclusivamente en la masa del individuo y su altura.
+        No tendría en cuenta la edad, el sexo, el porcentaje de grasa corporal o la masa muscular.
+        Incluso la categorización aún hoy es objeto de debate sobre dónde se deberían colocar esos
+        límites. Se acepta comúnmente los siguientes: infrapeso por debajo de 18.5 kg/m2, peso
+        normal: 18.5 a 25, sobrepeso: 25 a 30, obeso: más de 30.El IMC por debajo de 20 y sobre 25
+        ha sido asociado con menor probabilidad de mortalidad, incrementando el riesgo entre 20 -
+        25. La prevalencia de sobrepeso y obesidad es mayor en las Américas y menor en el Sureste
+        Asiático, y es del doble en países con ingresos medios y altos que en países con ingresos
+        bajos o muy bajos.
+        \n\nEl valor obtenido no es constante, sino que varía con la edad y el sexo. También depende de
+        otros factores, como las proporciones de tejidos muscular y adiposo. En el caso de los adultos
+        se ha utilizado como uno de los recursos para evaluar su estado nutricional, de acuerdo con
+        los valores propuestos por la Organización Mundial de la Salud.
+        \n\n<b>Observación</b>\nEl matemático Keith Devlin y el Center for Consumer Freedom (asociación de la industria de
+        la restauración) defiende que el error en el IMC es significante y tan habitual que lo hace
+        inútil para la evaluación de la salud. El profesor Eric Oliver de la Universidad de Chicago
+        dijo sin embargo que el IMC era conveniente pero también era una medida del peso inexacto,
+        que fuerza a ciertos grupos de la población y debería ser revisado.
+    </string>
+
+    <string name="tool_dripping_ev">Cálculo de goteo</string>
+    <string name="tool_dripping_ev_subtitle">Administracióm por vía intravenosa</string>
+    <string name="tool_dripping_ev_description">La vía intravenosa es una de las cuatro vías
+        parenterales que existen para la administración de medicamentos lo cual, en atención primaria, se suele llevar a cabo de dos maneras:
+        \n\n<b>Directa:</b>\nEs la administración del medicamento en forma de bolo, ya sea solo o diluido (normalmente en una jeringuilla de 10
+        ml, la cual contendría la sustancia a inyectar junto con suero fisiológico hasta completar
+        los 10 ml). Se usa pocas veces por las complicaciones a que puede dar lugar, ya que en
+        general los medicamentos necesitan un tiempo de infusión más amplio que el que se obtiene
+        con este procedimiento.
+        \n\n<b>Por goteo intravenoso:</b>\nCanalizando una vía venosa. Es la forma de tratamiento empleada ante determinadas situaciones
+        clínicas (crisis asmática, cólico nefrítico, etc.) o bien para permitir la derivación
+        hospitalaria en unas condiciones adecuadas.
+    </string>
+
+
+</resources>

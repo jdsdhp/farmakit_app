@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="products_filter_values">
+        <item>Deficiencia Hepática</item>
+        <item>Deficiencia Renal</item>
+        <item>Embarazo</item>
+        <item>Lactancia</item>
+        <item>Adulto Mayor</item>
+        <item>Niño</item>
+    </string-array>
+</resources>
