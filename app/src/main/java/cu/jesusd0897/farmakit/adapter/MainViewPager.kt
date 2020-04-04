@@ -10,16 +10,10 @@ class MainViewPager(fm: FragmentManager, private val tabsCount: Int) :
     FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     var productsFragment: ProductsFragment? = null
-        get() {
-            return if (field == null) getItem(0) as ProductsFragment
-            else field
-        }
+        get() = if (field == null) getItem(0) as ProductsFragment else field
 
     var naturalProductsFragment: NaturalProductsFragment? = null
-        get() {
-            return if (field == null) getItem(1) as NaturalProductsFragment
-            else field
-        }
+        get() = if (field == null) getItem(1) as NaturalProductsFragment else field
 
     override fun getItem(position: Int): Fragment =
         when (position) {

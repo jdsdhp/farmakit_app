@@ -59,4 +59,7 @@ object KNav {
         context.startActivity(
             Intent(context, RiskDetailActivity::class.java).putExtra(EXTRA_ITEM_TAG, risk)
         )
+
+    fun navToMain(context: Context) =
+        context.startActivity(Intent(context, MainActivity::class.java))
 }

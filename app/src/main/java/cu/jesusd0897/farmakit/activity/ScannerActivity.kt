@@ -36,10 +36,7 @@ class ScannerActivity : BaseActivity(), ZXingScannerView.ResultHandler {
             break
         }
         if (allGrant) when (requestCode) {
-            REQUEST_CODE_CAMERA -> {
-                scannerView.startCamera()
-                return
-            }
+            REQUEST_CODE_CAMERA -> scannerView.startCamera()
         } else {
             Toast.makeText(this, R.string.permissions_required, Toast.LENGTH_LONG).show()
             finish()
@@ -62,6 +59,5 @@ class ScannerActivity : BaseActivity(), ZXingScannerView.ResultHandler {
                 DialogInterface.OnClickListener { _, _ -> finish() }
             ).show()
         })
-
     }
 }

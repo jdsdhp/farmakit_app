@@ -14,9 +14,7 @@ class AboutActivity : BaseActivity() {
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         toolbar.setNavigationOnClickListener { onBackPressed() }
-        KNav.replaceFragment(
-            supportFragmentManager, AboutFragment.newInstance(), R.id.container
-        )
+        KNav.replaceFragment(supportFragmentManager, AboutFragment.newInstance(), R.id.container)
     }
 
 }

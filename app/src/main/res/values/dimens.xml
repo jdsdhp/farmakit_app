@@ -16,6 +16,7 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <!--Texts-->
+    <dimen name="dim_text_title_splash">36sp</dimen>
     <dimen name="dim_text_title">24sp</dimen>
     <dimen name="dim_text_accent">19sp</dimen>
     <dimen name="dim_text_subtitle">16sp</dimen>
@@ -31,6 +32,7 @@
     <dimen name="dim_empty_placeholder_image_size">100dp</dimen>
     <dimen name="dim_corner_radius">10dp</dimen>
     <dimen name="dim_item_icon_size">36dp</dimen>
-    <dimen name="detail_icon_size">72dp</dimen>
+    <dimen name="dim_detail_icon_size">150dp</dimen>
+    <dimen name="dim_splash_icon_size">150dp</dimen>
 
 </resources>

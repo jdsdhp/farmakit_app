@@ -34,11 +34,11 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/icon_view"
-                    android:layout_width="@dimen/detail_icon_size"
-                    android:layout_height="@dimen/detail_icon_size"
+                    android:layout_width="@dimen/dim_detail_icon_size"
+                    android:layout_height="@dimen/dim_detail_icon_size"
                     android:background="@drawable/shape_circle"
                     android:backgroundTint="?colorSecondary"
-                    android:padding="@dimen/dim_padding"
+                    android:padding="@dimen/dim_padding_big"
                     app:srcCompat="@drawable/ic_exclamation_triangle" />
 
                 <androidx.appcompat.widget.AppCompatTextView

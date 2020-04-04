@@ -9,13 +9,28 @@
         android:orientation="vertical"
         android:padding="@dimen/dim_padding_medium">
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dim_margin_very_small"
-            android:text="@string/filter_by_exclusion"
-            android:textSize="@dimen/dim_text_title_item"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dim_margin_very_small"
+                android:layout_weight="1"
+                android:text="@string/filter_by_exclusion"
+                android:textSize="@dimen/dim_text_title_item"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/help_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/ic_question_circle" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -45,10 +60,16 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dim_margin_small"
+            android:layout_marginBottom="@dimen/dim_margin_small"
+            android:background="?colorSecondary" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dim_margin"
             android:layout_marginBottom="@dimen/dim_margin_very_small"
             android:text="@string/risks_at"
             android:textSize="@dimen/dim_text_title_item"
@@ -58,6 +79,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/teenager_population"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:drawableStart="@drawable/ic_male"
+                android:drawablePadding="@dimen/dim_padding_small"
+                android:text="@string/teenager_population" />
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/old_population"
@@ -87,6 +117,15 @@
                 android:text="@string/renal_population" />
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/diabetes_population"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:drawableStart="@drawable/ic_circle"
+                android:drawablePadding="@dimen/dim_padding_very_small"
+                android:text="@string/diabetes_population" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/pregnancy_population"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -109,7 +148,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:drawableStart="@drawable/ic_baby"
+                android:drawableStart="@drawable/ic_child"
                 android:drawablePadding="@dimen/dim_padding_small"
                 android:text="@string/child_population" />
 

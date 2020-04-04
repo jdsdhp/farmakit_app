@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">FarmaKit</string>
-    <string name="app_dev">jesusd0897</string>
-    <string name="app_year">2020</string>
-    <string name="app_copyright">©2020</string>
-    <string name="app_team">neuronX</string>
-    <string name="about_brief">“El amanecer llega después de la oscuridad.”\n- Lisa Wingate</string>
+    <string name="app_name" translatable="false">FarmaKit</string>
+    <string name="app_dev" translatable="false">jesusd0897</string>
+    <string name="app_dev_email" translatable="false">jesus0897@gmail.com</string>
+    <string name="app_year" translatable="false">2020</string>
+    <string name="app_copyright" translatable="false">©2020</string>
+    <string name="app_team" translatable="false">neuronX</string>
+    <string name="about_brief">Base de datos y parte de la información se le atribuye a:\nhttps://github.com/walterwhite83/medicaments_database</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -34,14 +35,15 @@
     <string name="filter_by_exclusion">Tipo de filtro</string>
     <string name="reset_filter">Resetear</string>
 
+    <string name="teenager_population">Adolescente</string>
     <string name="old_population">Adulto mayor</string>
     <string name="hepatic_population">Deficiencia Hepática</string>
     <string name="renal_population">Deficiencia Renal</string>
     <string name="pregnancy_population">Embarazo</string>
     <string name="child_population">Niño</string>
     <string name="lactation_population">Lactancia</string>
-    <string name="not_available">No disponible</string>
 
+    <string name="not_available">No disponible</string>
     <string name="categories">"Categoría(s) "</string>
     <string name="classification_ven">Clasificación VEN</string>
     <string name="composition">Composición</string>
@@ -96,4 +98,9 @@
     <string name="value_cant_be_0">El valor no puede ser \"0\"</string>
     <string name="risk_categories">Categorías de Riesgo</string>
     <string name="support">Soporte</string>
+    <string name="diabetes_population">Diabetes Mellitus</string>
+    <string name="filter_help">El filtro de tipo INCLUSIVO mostrará como resultado los fármacos que posean como riesgo o precaución alguno (uno o más) de los elementos marcados. En cambio el filtro EXCLUSIVO mostrará solo aquellos fármacos que cumplan con todos los elementos marcados.</string>
+    <string name="added_to_fav">Marcado como favorito</string>
+    <string name="removed_from_fav">Desmarcado como favorito</string>
+
 </resources>

@@ -4,11 +4,11 @@
     <string name="change_log_050_date" translatable="false">01/04/2020</string>
     <string name="change_log_050_changes">• Lanzamiento inicial.</string>
 
-    <!--<string name="change_log_060_version" translatable="false">0.6.0</string>
-    <string name="change_log_060_date" translatable="false">30/09/1997</string>
-    <string name="change_log_060_changes">•<b> Nuevo!</b> Tema oscuro.
-        \n• Arreglados algunos bugs.
-        \n• Estilos <b>negrita</b> y <i>cursiva</i> en registro de cambios.
-    </string>-->
+    <string name="change_log_060_version" translatable="false">0.6.0</string>
+    <string name="change_log_060_date" translatable="false">04/04/2020</string>
+    <string name="change_log_060_changes">• <b>Nuevo!</b> Pantalla de Splash.
+        \n• Cambio de fuente.
+        \n• Arreglados algunos errores menores en el filtro de búsqueda.
+    </string>
 
 </resources>

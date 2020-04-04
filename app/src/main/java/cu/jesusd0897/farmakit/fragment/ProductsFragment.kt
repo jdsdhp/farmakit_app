@@ -18,10 +18,13 @@ import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class ProductsFragment :
     SearchRecyclerFragment<MinProduct>(
         R.string.no_items_found, R.drawable.ic_find_in_page_black_24dp
-    ),
-    OnInteractionListener<MinProduct> {
+    ), OnInteractionListener<MinProduct> {
 
     private lateinit var viewModel: ProductViewModel
+    private val DB_FLAGS = arrayOf(
+        "%Adolescente:%", "%Adulto mayor:%", "%Deficiencia hepática:%", "%Deficiencia renal:%",
+        "%Diabetes Mellitus:%", "%Embarazo:%", "%Lactancia:%", "%Niño:%"
+    )
 
     companion object {
         fun newInstance(): ProductsFragment = ProductsFragment()
@@ -62,29 +65,34 @@ class ProductsFragment :
     fun changeFilter(@IntRange(from = 0, to = 1) radioIndexChecked: Int, booleans: BooleanArray?) {
         viewModel = ProductViewModel(activity!!.application)
         var flags = booleans
-        if (flags == null) flags = booleanArrayOf(true, true, true, true, true, true)
+        if (flags == null) flags = booleanArrayOf(true, true, true, true, true, true, true, true)
 
         if (!flags.contains(false)) {
             if (radioIndexChecked == 0) viewModel.all.observe(this, this)
-            else viewModel.filterByPopulationExclusive(
-                "%Adulto mayor:%", "%DH:%", "%DR:%", "%E:%", "%LM:%", "%Niños:%"
+            else viewModel.filterByRisksExclusive(
+                DB_FLAGS[0], DB_FLAGS[1], DB_FLAGS[2], DB_FLAGS[3],
+                DB_FLAGS[4], DB_FLAGS[5], DB_FLAGS[6], DB_FLAGS[7]
             ).observe(this, this)
         } else {
-            if (radioIndexChecked == 0) viewModel.filterByPopulation(
-                if (flags[0]) "%Adulto mayor:%" else "NULL VALUE",
-                if (flags[1]) "%DH:%" else "NULL VALUE",
-                if (flags[2]) "%DR:%" else "NULL VALUE",
-                if (flags[3]) "%E:%" else "NULL VALUE",
-                if (flags[4]) "%LM:%" else "NULL VALUE",
-                if (flags[5]) "%Niños:%" else "NULL VALUE"
+            if (radioIndexChecked == 0) viewModel.filterByRisksInclusive(
+                if (flags[0]) DB_FLAGS[0] else "NULL VALUE",
+                if (flags[1]) DB_FLAGS[1] else "NULL VALUE",
+                if (flags[2]) DB_FLAGS[2] else "NULL VALUE",
+                if (flags[3]) DB_FLAGS[3] else "NULL VALUE",
+                if (flags[4]) DB_FLAGS[4] else "NULL VALUE",
+                if (flags[5]) DB_FLAGS[5] else "NULL VALUE",
+                if (flags[6]) DB_FLAGS[6] else "NULL VALUE",
+                if (flags[7]) DB_FLAGS[7] else "NULL VALUE"
             ).observe(this, this)
-            else viewModel.filterByPopulationExclusive(
-                if (flags[0]) "%Adulto mayor:%" else "%%",
-                if (flags[1]) "%DH:%" else "%%",
-                if (flags[2]) "%DR:%" else "%%",
-                if (flags[3]) "%E:%" else "%%",
-                if (flags[4]) "%LM:%" else "%%",
-                if (flags[5]) "%Niños:%" else "%%"
+            else viewModel.filterByRisksExclusive(
+                if (flags[0]) DB_FLAGS[0] else "%%",
+                if (flags[1]) DB_FLAGS[1] else "%%",
+                if (flags[2]) DB_FLAGS[2] else "%%",
+                if (flags[3]) DB_FLAGS[3] else "%%",
+                if (flags[4]) DB_FLAGS[4] else "%%",
+                if (flags[5]) DB_FLAGS[5] else "%%",
+                if (flags[6]) DB_FLAGS[6] else "%%",
+                if (flags[7]) DB_FLAGS[7] else "%%"
             ).observe(this, this)
         }
 

@@ -24,11 +24,11 @@ val LIBRARIES: List<Library> = arrayListOf(
         R.string.library_barcodescanner_link,
         R.string.library_barcodescanner_license
     ),
-    /*Library(
+    Library(
         R.string.library_circleimageview,
         R.string.library_circleimageview_link,
         R.string.library_circleimageview_license
-    ),*/
+    ),
     Library(
         R.string.library_kotlin,
         R.string.library_kotlin_link,
@@ -53,19 +53,10 @@ val LIBRARIES: List<Library> = arrayListOf(
         R.string.library_materialsearchview,
         R.string.library_materialsearchview_link,
         R.string.library_materialsearchview_license
-    ), Library(
-        R.string.library_okhttp3,
-        R.string.library_okhttp3_link,
-        R.string.library_okhttp3_license
     ),
     Library(
         R.string.library_picasso,
         R.string.library_picasso_link,
         R.string.library_picasso_license
-    )/*
-    Library(
-        R.string.library_sqlcipher,
-        R.string.library_sqlcipher_link,
-        R.string.library_sqlcipher_license
-    )*/
+    )
 )

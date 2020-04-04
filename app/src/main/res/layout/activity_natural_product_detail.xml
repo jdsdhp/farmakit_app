@@ -30,14 +30,14 @@
                 android:orientation="vertical"
                 android:padding="@dimen/dim_padding">
 
-                <androidx.appcompat.widget.AppCompatImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/icon_view"
-                    android:layout_width="@dimen/detail_icon_size"
-                    android:layout_height="@dimen/detail_icon_size"
+                    android:layout_width="@dimen/dim_detail_icon_size"
+                    android:layout_height="@dimen/dim_detail_icon_size"
                     android:background="@drawable/shape_circle"
                     android:backgroundTint="?colorSecondary"
-                    android:padding="@dimen/dim_padding"
-                    app:srcCompat="@drawable/ic_leaf2" />
+                    app:civ_border_color="?colorSecondary"
+                    app:civ_border_width="4dp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/title_view"
@@ -83,6 +83,7 @@
             android:id="@+id/web_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dim_margin_really_big"
             android:scrollbars="none" />
 
     </androidx.core.widget.NestedScrollView>

@@ -15,9 +15,6 @@ import cu.jesusd0897.farmakit.database.model.minimal.MinNaturalProduct
 @Dao
 interface NaturalProductDao : BasicDao<NaturalProduct> {
 
-    @Query("DELETE FROM $NATURAL_PRODUCTS")
-    fun deleteAll()
-
     @Query("SELECT * FROM $NATURAL_PRODUCTS WHERE $ID LIKE :id")
     fun get(id: String): LiveData<NaturalProduct>
 

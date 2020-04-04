@@ -41,7 +41,8 @@ abstract class SearchRecyclerFragment<M : Model?> internal constructor(
         super.onDestroyOptionsMenu()
         searchView.closeSearch()
         adapter.setItems(items)
-        emptyPlaceholder.visibility = View.GONE
+        if (this.items.isEmpty()) setEmptyPlaceholder()
+        else emptyPlaceholder.visibility = View.GONE
     }
 
     override fun onChanged(items: MutableList<M>) {

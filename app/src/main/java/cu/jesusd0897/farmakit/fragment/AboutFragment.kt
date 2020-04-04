@@ -10,7 +10,6 @@ import cu.jesusd0897.farmakit.R
 import cu.jesusd0897.farmakit.util.KNav
 import cu.jesusd0897.farmakit.util.KUtil
 
-
 class AboutFragment : Fragment() {
 
     companion object {
@@ -24,23 +23,22 @@ class AboutFragment : Fragment() {
         .setLinksAnimated(true)
         .setShowAsCard(false)
         .setPhoto(R.drawable.jesusd0897)
-        //.setCover(R.drawable.about_background_photo)
         .setBackgroundColor(KUtil.getThemeColor(context!!, android.R.attr.colorBackground))
         .setName(R.string.app_dev)
         .setSubTitle(R.string.app_copyright)
         .setBrief(R.string.about_brief)
-        .setAppIcon(KUtil.getBitmapFromDrawable(context!!, R.drawable.ic_launcher_round))
+        .setAppIcon(R.drawable.ic_launcher_round)
         .setAppName(R.string.app_name)
-        //.addGooglePlayStoreLink("8002078663318221363")
-        .addGitHubLink("jdsdhp/kapp")
-        .addFacebookLink("jesusdaniel.saura")
-        .addLinkedInLink("in/jdsdhp")
-        .addTwitterLink("jdsdhp")
-        .addEmailLink("jesus0897@gmail.com")
-        .addChangeLogAction { KNav.navToChangelog(context!!) }
-        .addFiveStarsAction()
         .setVersionNameAsAppSubTitle()
-        .addShareAction(R.string.app_name)
+        .addGitHubLink("jdsdhp/farmakit_app")
+        .addEmailLink(getString(R.string.app_dev_email))
+        .addChangeLogAction { KNav.navToChangelog(context!!) }
+        .addFeedbackAction(
+            getString(R.string.app_dev_email),
+            getString(R.string.app_name) + "/feedback"
+        )
+        //.addFiveStarsAction()
+        //.addShareAction(R.string.app_name)
         .build()
 
 }

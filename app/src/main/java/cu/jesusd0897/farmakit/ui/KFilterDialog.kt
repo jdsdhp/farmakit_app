@@ -5,11 +5,13 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatCheckBox
+import androidx.appcompat.widget.AppCompatImageButton
 import androidx.appcompat.widget.AppCompatRadioButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import cu.jesusd0897.farmakit.R
+import cu.jesusd0897.farmakit.util.KAlert
 
-class ProductFilterDialog(
+class KFilterDialog(
     val activity: AppCompatActivity,
     @StringRes var title: Int?,
     @StringRes var message: Int?,
@@ -34,9 +36,11 @@ class ProductFilterDialog(
         rootView.findViewById(R.id.exclusive_radio)
     )
     private val checks: List<AppCompatCheckBox> = arrayListOf(
+        rootView.findViewById(R.id.teenager_population),
         rootView.findViewById(R.id.old_population),
         rootView.findViewById(R.id.hepatic_population),
         rootView.findViewById(R.id.renal_population),
+        rootView.findViewById(R.id.diabetes_population),
         rootView.findViewById(R.id.pregnancy_population),
         rootView.findViewById(R.id.lactation_population),
         rootView.findViewById(R.id.child_population)
@@ -50,7 +54,8 @@ class ProductFilterDialog(
                 booleanArrayOf(
                     checks[0].isChecked, checks[1].isChecked,
                     checks[2].isChecked, checks[3].isChecked,
-                    checks[4].isChecked, checks[5].isChecked
+                    checks[4].isChecked, checks[5].isChecked,
+                    checks[6].isChecked, checks[7].isChecked
                 )
             )
         },
@@ -63,9 +68,20 @@ class ProductFilterDialog(
             checks[3].isChecked = true
             checks[4].isChecked = true
             checks[5].isChecked = true
+            checks[6].isChecked = true
+            checks[7].isChecked = true
             clickListener.onNeutralClick()
         }
     ).create()
+
+    init {
+        rootView.findViewById<AppCompatImageButton>(R.id.help_btn).setOnClickListener {
+            KAlert.buildSimpleOKDialog(
+                activity, R.string.help, R.string.filter_help, R.string.close,
+                null, true
+            ).show()
+        }
+    }
 
     private fun build(
         activity: AppCompatActivity,
@@ -89,7 +105,6 @@ class ProductFilterDialog(
     }
 
     fun show() = dialog.show()
-
     fun dismiss() = dialog.dismiss()
 
 }

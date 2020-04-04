@@ -10,17 +10,19 @@ import android.net.Uri
 import android.os.Build
 import android.util.Base64
 import android.util.TypedValue
+import android.widget.ImageView
 import androidx.annotation.AttrRes
 import androidx.annotation.DrawableRes
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
+import com.squareup.picasso.Picasso
 import cu.jesusd0897.farmakit.R
 import java.text.DecimalFormat
 import java.util.*
 
 const val TAG_DEBUG = " - jd/dev"
-const val ASSETS_DIRECTORY = "file:///android_asset/"
+const val ASSETS_DIRECTORY = "file:///android_asset"
 const val REQUEST_CODE_CAMERA = 666
 
 object KUtil {
@@ -54,7 +56,7 @@ object KUtil {
     }
 
     fun getStringColorFromAttr(context: Context, @AttrRes color: Int): String =
-        "#" + Integer.toHexString(getThemeColor(context, color)).substring(2);
+        "#" + Integer.toHexString(getThemeColor(context, color)).substring(2)
 
 
     fun getBitmapFromDrawable(context: Context, @DrawableRes drawableId: Int): Bitmap? {
@@ -122,28 +124,7 @@ object KUtil {
     fun getPresentationIcon(presentation: String): Int =
         PRESENTATIONS[presentation.toLowerCase(Locale.getDefault())] ?: R.drawable.ic_medicine
 
-    /*fun loadAssetTextFile(context: Context, inFile: String): String? {
-        val reader = BufferedReader(InputStreamReader(context.assets.open(inFile)))
-        val stringBuffer = StringBuilder("")
-        try {
-            // do reading, usually loop until end of file reading
-            while (true) {
-                val mLine = reader.readLine()
-                if (mLine != null) stringBuffer.append(mLine)
-                else break
-            }
-            reader.close()
-        } catch (e: IOException) {
-            e.printStackTrace()
-            android.util.Log.e(TAG_DEBUG, e.message, e)
-        }
-        return stringBuffer.toString()
-    }*/
-
-    fun getTwoDecimals(value: Double): String {
-        val df = DecimalFormat("0.00")
-        return df.format(value)
-    }
+    fun getTwoDecimals(value: Double): String = DecimalFormat("0.00").format(value)
 
     private val IMC_RESULT_SUBTITLES: Map<Int, Pair<Int, Int>> = hashMapOf(
         0 to Pair(R.string.imc_low_weight, R.string.imc_low_weight_1),
@@ -172,4 +153,9 @@ object KUtil {
             }
         }
     }
+
+    fun loadImage(
+        imageView: ImageView, parentUrl: String, imageName: String, @DrawableRes error: Int
+    ) = Picasso.get().load("$parentUrl/$imageName").error(error).into(imageView)
+
 }

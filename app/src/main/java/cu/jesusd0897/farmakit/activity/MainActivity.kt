@@ -21,7 +21,7 @@ import com.google.android.material.tabs.TabLayout.TabLayoutOnPageChangeListener
 import com.miguelcatalan.materialsearchview.MaterialSearchView
 import cu.jesusd0897.farmakit.R
 import cu.jesusd0897.farmakit.adapter.MainViewPager
-import cu.jesusd0897.farmakit.ui.ProductFilterDialog
+import cu.jesusd0897.farmakit.ui.KFilterDialog
 import cu.jesusd0897.farmakit.util.KNav
 
 class MainActivity : BaseActivity(), MaterialSearchView.OnQueryTextListener,
@@ -33,7 +33,7 @@ class MainActivity : BaseActivity(), MaterialSearchView.OnQueryTextListener,
     private lateinit var tabLayout: TabLayout
     private lateinit var appBarLayout: AppBarLayout
     private lateinit var pagerAdapter: MainViewPager
-    private lateinit var filterDialog: ProductFilterDialog
+    private lateinit var filterDialog: KFilterDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,8 +47,7 @@ class MainActivity : BaseActivity(), MaterialSearchView.OnQueryTextListener,
             this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
         toggle.isDrawerIndicatorEnabled = false
-        val drawable =
-            ResourcesCompat.getDrawable(resources, R.drawable.ic_short_text_black_24dp, theme)
+        val drawable = ResourcesCompat.getDrawable(resources, R.drawable.ic_navigation_menu, theme)
         toggle.setHomeAsUpIndicator(drawable)
         drawer.addDrawerListener(toggle)
         toggle.syncState()
@@ -59,7 +58,6 @@ class MainActivity : BaseActivity(), MaterialSearchView.OnQueryTextListener,
         navigationView.setNavigationItemSelectedListener(this)
 
         searchView = findViewById(R.id.search_view)
-
         appBarLayout = findViewById(R.id.app_bar)
         tabLayout = findViewById(R.id.tabs)
         tabLayout.addTab(tabLayout.newTab())
@@ -91,11 +89,10 @@ class MainActivity : BaseActivity(), MaterialSearchView.OnQueryTextListener,
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })
         searchView.setOnQueryTextListener(this)
-
-        filterDialog = ProductFilterDialog(
+        filterDialog = KFilterDialog(
             this, null, null, null, null,
             R.string.accept, R.string.cancel, R.string.reset_filter,
-            object : ProductFilterDialog.OnClickListener {
+            object : KFilterDialog.OnClickListener {
                 override fun onPositiveClick(radioIndexChecked: Int, checkedItems: BooleanArray) =
                     pagerAdapter.productsFragment!!.changeFilter(radioIndexChecked, checkedItems)
 
@@ -104,7 +101,6 @@ class MainActivity : BaseActivity(), MaterialSearchView.OnQueryTextListener,
                     pagerAdapter.productsFragment!!.changeFilter(0, null)
             }
         )
-
         fab = findViewById(R.id.fab)
         fab.setOnClickListener { filterDialog.show() }
     }

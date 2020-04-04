@@ -22,11 +22,11 @@ import cu.jesusd0897.farmakit.database.model.minimal.MinProduct
 @Dao
 interface ProductDao : BasicDao<Product> {
 
-    @Query("DELETE FROM $PRODUCTS")
-    fun deleteAll()
-
     @Query("SELECT * FROM $PRODUCTS WHERE $ID LIKE :id")
     fun get(id: String): LiveData<Product>
+
+    @Query("SELECT * FROM $PRODUCTS WHERE $CODE LIKE :code")
+    fun findByCode(code: String): LiveData<Product>
 
     @get:Query(
         "SELECT $ID, $NAME, $PRESENTATION, $PRESENTATION_AMOUNT, $INTERNAL_NAME, $CATEGORY, $LABORATORY, $PRICE, $IS_FAVORITE " +
@@ -42,13 +42,17 @@ interface ProductDao : BasicDao<Product> {
                 "(" + POPULATION + " LIKE :hepatic OR " + PRECAUTIONS + " LIKE :hepatic) OR " +
                 "(" + POPULATION + " LIKE :renal OR " + PRECAUTIONS + " LIKE :renal) OR " +
                 "(" + POPULATION + " LIKE :old OR " + PRECAUTIONS + " LIKE :old) OR " +
+                "(" + POPULATION + " LIKE :teenager OR " + PRECAUTIONS + " LIKE :teenager) OR " +
+                "(" + POPULATION + " LIKE :diabetes OR " + PRECAUTIONS + " LIKE :diabetes) OR " +
                 "(" + POPULATION + " LIKE :child OR " + PRECAUTIONS + " LIKE :child) " +
                 "ORDER BY $IS_FAVORITE DESC, $NAME"
     )
-    fun filterByPopulation(
+    fun filterByRisksInclusive(
+        teenager: String,
         old: String,
         hepatic: String,
         renal: String,
+        diabetes: String,
         pregnancy: String,
         lactation: String,
         child: String
@@ -62,19 +66,20 @@ interface ProductDao : BasicDao<Product> {
                 "(" + POPULATION + " LIKE :hepatic OR " + PRECAUTIONS + " LIKE :hepatic) AND " +
                 "(" + POPULATION + " LIKE :renal OR " + PRECAUTIONS + " LIKE :renal) AND " +
                 "(" + POPULATION + " LIKE :old OR " + PRECAUTIONS + " LIKE :old) AND " +
+                "(" + POPULATION + " LIKE :teenager OR " + PRECAUTIONS + " LIKE :teenager) AND " +
+                "(" + POPULATION + " LIKE :diabetes OR " + PRECAUTIONS + " LIKE :diabetes) AND " +
                 "(" + POPULATION + " LIKE :child OR " + PRECAUTIONS + " LIKE :child) " +
                 "ORDER BY $IS_FAVORITE DESC, $NAME"
     )
-    fun filterByPopulationExclusive(
+    fun filterByRisksExclusive(
+        teenager: String,
         old: String,
         hepatic: String,
         renal: String,
+        diabetes: String,
         pregnancy: String,
         lactation: String,
         child: String
     ): LiveData<MutableList<MinProduct>>
-
-    @Query("SELECT * FROM $PRODUCTS WHERE $CODE LIKE :code")
-    fun findByCode(code: String): LiveData<Product>
 
 }

@@ -15,8 +15,6 @@ abstract class GenericViewHolder<M> internal constructor(
             return@setOnLongClickListener true
         }*/
     }
-
     abstract fun bind(model: M)
     abstract fun getModel(position: Int): M
-
 }

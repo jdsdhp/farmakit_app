@@ -14,11 +14,11 @@ data class ChangeLog(
 }
 
 val CHANGE_LOGS: List<ChangeLog> = arrayListOf(
-    /*ChangeLog(
+    ChangeLog(
         R.string.change_log_060_version,
         R.string.change_log_060_date,
         R.string.change_log_060_changes
-    ),*/
+    ),
     ChangeLog(
         R.string.change_log_050_version,
         R.string.change_log_050_date,

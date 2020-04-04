@@ -17,7 +17,6 @@ import kotlin.math.abs
 class ToolDetailActivity : BaseActivity() {
 
     private lateinit var tool: Tool
-
     private lateinit var toolbar: Toolbar
     private lateinit var appBarLayout: AppBarLayout
     private lateinit var iconView: AppCompatImageView

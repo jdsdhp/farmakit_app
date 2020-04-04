@@ -5,13 +5,12 @@ import androidx.room.Database
 import androidx.room.DatabaseConfiguration
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import cu.jesusd0897.farmakit.database.dao.ImageDao
 import cu.jesusd0897.farmakit.database.dao.NaturalProductDao
 import cu.jesusd0897.farmakit.database.dao.ProductDao
 import cu.jesusd0897.farmakit.database.model.Image
 import cu.jesusd0897.farmakit.database.model.NaturalProduct
 import cu.jesusd0897.farmakit.database.model.Product
-import net.sqlcipher.database.SQLiteDatabase
-import net.sqlcipher.database.SupportFactory
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
@@ -25,9 +24,9 @@ abstract class KRoomDatabase : RoomDatabase() {
 
     abstract fun naturalProductDao(): NaturalProductDao
     abstract fun productDao(): ProductDao
+    abstract fun imageDao(): ImageDao
 
     companion object {
-
         @Volatile
         private var database: KRoomDatabase? = null
         private lateinit var context: Context

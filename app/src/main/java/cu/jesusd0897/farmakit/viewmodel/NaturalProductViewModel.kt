@@ -12,14 +12,5 @@ class NaturalProductViewModel(app: Application) : AndroidViewModel(app), Natural
     private val repo: NaturalProductRepo = NaturalProductRepo(app)
     override val all: LiveData<MutableList<MinNaturalProduct>> = repo.all
     override fun get(id: String): LiveData<NaturalProduct> = repo.get(id)
-    override fun insert(model: NaturalProduct) = repo.insert(model)
-    override fun insert(vararg models: NaturalProduct) = repo.insert(*models)
-    override fun insert(models: List<NaturalProduct>) = repo.insert(models)
     override fun update(model: NaturalProduct) = repo.update(model)
-    override fun update(vararg models: NaturalProduct) = repo.update(*models)
-    override fun update(models: List<NaturalProduct>) = repo.update(models)
-    override fun delete(model: NaturalProduct) = repo.delete(model)
-    override fun delete(vararg models: NaturalProduct) = repo.delete(*models)
-    override fun delete(models: List<NaturalProduct>) = repo.delete(models)
-    override fun deleteAll() = repo.deleteAll()
 }

@@ -37,7 +37,7 @@ import cu.jesusd0897.farmakit.database.Tables
 import cu.jesusd0897.farmakit.model.Model
 import kotlinx.android.parcel.Parcelize
 
-@Entity(tableName = Tables.PRODUCTS/*, indices = [Index(value = [NAME])]*/)
+@Entity(tableName = Tables.PRODUCTS)
 @Parcelize
 data class Product(
     @PrimaryKey @field:ColumnInfo(name = ID) val id: Int,

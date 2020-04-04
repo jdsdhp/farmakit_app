@@ -14,7 +14,6 @@ import kotlin.math.abs
 class RiskDetailActivity : BaseActivity() {
 
     private lateinit var risk: Risk
-
     private lateinit var toolbar: Toolbar
     private lateinit var appBarLayout: AppBarLayout
     private lateinit var iconView: AppCompatImageView

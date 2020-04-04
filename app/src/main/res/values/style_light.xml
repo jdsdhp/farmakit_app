@@ -5,6 +5,7 @@
     <style name="MyTheme.Basic.Light" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/hind_regular</item>
     </style>
 
     <style name="MyTheme.Light" parent="MyTheme.Basic.Light">
